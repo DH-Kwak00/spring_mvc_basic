@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원목록</title>
+</head>
+<body>
+
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--&lt;!&ndash;                <th>이름</th>&ndash;&gt;-->
+<!--                <th>상세보기</th>-->
+<!--                <td th:text="${member.id}"></td>-->
+<!--&lt;!&ndash;                <td th:text="${member.name}"></td>&ndash;&gt;-->
+<!--                <td><a href="@{'/members/detail?id=' + ${member.id}}">상세보기</a></td>-->
+<!--            </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <!--                <th>이름</th>-->
+        <th>상세보기</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="member : ${members}">
+        <td th:text="${member.id}"></td>
+        <!--                <td th:text="${member.name}"></td>-->
+        <td><a th:href="@{'/members/detail?id=' + ${member.id}}">상세보기</a></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

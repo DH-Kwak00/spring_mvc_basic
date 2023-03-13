@@ -18,8 +18,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'mysql:mysql-connector-java:8.0.30'
+//	compileOnly 'org.projectlombok:lombok'
+//	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+//	jsp, servlet을 위한 설정
+//	jsp의 경루 파일을 읽는 경로가 src/main/webapp/WEB-INF 폴더를 찾는다
+	implementation 'javax.servlet:jstl:'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:'
+
 }
 
 tasks.named('test') {
